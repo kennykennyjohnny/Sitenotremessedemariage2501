@@ -1,0 +1,17 @@
+/* Alfarn - Police titres du site original */
+@font-face {
+  font-family: 'Alfarn';
+  src: url('https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main/fonts/Alfarn-Regular.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Avenir LT Pro - Police textes du site original */
+@font-face {
+  font-family: 'Avenir LT Pro';
+  src: url('https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main/fonts/AvenirLTPro.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
