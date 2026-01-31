@@ -4,8 +4,7 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function LandingPage() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/NuptiaLogos/siteNotreMesseDeMariage/main';
-  const GITHUB_OLD = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -14,10 +13,10 @@ export default function LandingPage() {
       <Navigation variant="dark" />
       
       {/* Hero Section avec photo et dégradé orange vers violet */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
         <div className="absolute inset-0">
           <img 
-            src={`${GITHUB_RAW}/wedding-photography-RJDWzHyh6gE-unsplash.jpg`}
+            src={`${GITHUB_RAW}/images/wedding-photography-RJDWzHyh6gE-unsplash.jpg`}
             alt="Couple de mariés" 
             className="absolute inset-0 w-full h-full object-cover object-[center_35%]"
             onError={(e) => {
@@ -26,17 +25,17 @@ export default function LandingPage() {
             }}
           />
           {/* Dégradé INVERSÉ : violet à gauche → orange à droite (raccord avec header) */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(101,45,144,0.73)] to-[rgba(250,130,17,0.52)]"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[rgba(101,45,144,0.45)] to-[rgba(250,130,17,0.32)]"></div>
           <div className="absolute top-20 left-10 w-96 h-96 bg-[#652D90] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob"></div>
           <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#FA8211] rounded-full mix-blend-multiply filter blur-3xl opacity-10 animate-blob animation-delay-2000"></div>
         </div>
 
         <div className="max-w-6xl mx-auto relative z-10 w-full px-4 py-20">
-          <div className="text-center mb-16 -mt-20">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight uppercase drop-shadow-2xl" style={alfarnFont}>
+          <div className="text-center mb-16 -mt-10">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight uppercase drop-shadow-2xl" style={alfarnFont}>
               Préparez votre{' '}
               <br />
-              <span className="text-[#FA8211] drop-shadow-lg text-5xl md:text-6xl lg:text-7xl">
+              <span className="text-[#FA8211] drop-shadow-lg text-4xl md:text-5xl lg:text-6xl">
                 Messe de Mariage
               </span>
               <br />
@@ -73,7 +72,7 @@ export default function LandingPage() {
               className="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#FA8211]/50 hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-[#FA8211]">
               <div className="relative h-48 overflow-hidden">
                 <img 
-                  src={`${GITHUB_RAW}/pexels-ali-jabiyef-3221451-29411115.jpg`}
+                  src={`${GITHUB_RAW}/images/pexels-ali-jabiyef-3221451-29411115.jpg`}
                   alt="Futurs Mariés"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
@@ -113,7 +112,7 @@ export default function LandingPage() {
               className="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#98A882]/50 hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-[#98A882]">
               <div className="relative h-48 overflow-hidden">
                 <img 
-                  src={`${GITHUB_RAW}/matteo-del-piano-CNTC7WkVNZc-unsplash.jpg`}
+                  src={`${GITHUB_RAW}/images/matteo-del-piano-CNTC7WkVNZc-unsplash.jpg`}
                   alt="Paroisses"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
@@ -153,7 +152,7 @@ export default function LandingPage() {
               className="group relative bg-white/95 backdrop-blur-sm rounded-2xl overflow-hidden shadow-2xl hover:shadow-[#652D90]/50 hover:scale-105 transition-all duration-500 border-2 border-transparent hover:border-[#652D90]">
               <div className="relative h-48 overflow-hidden">
                 <img 
-                  src={`${GITHUB_RAW}/pexels-alexander-mass-748453803-32527856.jpg`}
+                  src={`${GITHUB_RAW}/images/pexels-alexander-mass-748453803-32527856.jpg`}
                   alt="Musiciens"
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
@@ -198,42 +197,37 @@ export default function LandingPage() {
       {/* Section Screenshots de l'application */}
       <section className="py-20 px-4 bg-gradient-to-b from-[#FFFCF2] to-white">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-[#652D90] mb-4 uppercase" style={alfarnFont}>
+          <div className="text-center mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#652D90] mb-6 uppercase" style={alfarnFont}>
               Une plateforme intuitive et complète
             </h2>
-            <p className="text-xl text-[#000000]/70 max-w-2xl mx-auto" style={avenirFont}>
+            <p className="text-lg text-[#000000]/70 max-w-2xl mx-auto" style={avenirFont}>
               Découvrez l'interface qui simplifie la préparation de votre messe de mariage
             </p>
           </div>
 
-          {/* Screenshot 1 - Mobile */}
-          <div className="mb-20">
-            <div className="max-w-md mx-auto">
-              <img 
-                src={`figma:asset/d7217f62a5d6f2762cb8747f2e78ee51fb8b3c7b.png`}
-                alt="Accédez simplement aux détails de vos mariages"
-                className="w-full h-auto rounded-3xl shadow-2xl"
-              />
-            </div>
+          {/* Screenshot principal - Double devices */}
+          <div className="mb-24">
+            <img 
+              src={`${GITHUB_RAW}/images/screenshot-app-main.png`}
+              alt="Interface de gestion des mariages"
+              className="w-full h-auto rounded-3xl shadow-2xl"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=1920&q=90';
+              }}
+            />
           </div>
 
-          {/* Screenshots 2 & 3 - Tablettes côte à côte */}
-          <div className="grid md:grid-cols-2 gap-12 mb-12">
-            <div>
-              <img 
-                src={`figma:asset/411296d3c2d9a809af386c44d921f1e7f6cb0b14.png`}
-                alt="Gérez votre bibliothèque en un clic"
-                className="w-full h-auto rounded-3xl shadow-2xl"
-              />
-            </div>
-            <div>
-              <img 
-                src={`figma:asset/8edca19ea9e4a885496dbd8217a3019fd5ecd150.png`}
-                alt="L'avancement de vos mariages au premier regard"
-                className="w-full h-auto rounded-3xl shadow-2xl"
-              />
-            </div>
+          {/* Screenshot détaillé - Mobile + Tablette */}
+          <div className="mb-24">
+            <img 
+              src={`${GITHUB_RAW}/images/screenshot-app-details.png`}
+              alt="Détails du déroulé de la célébration"
+              className="w-full h-auto rounded-3xl shadow-2xl"
+              onError={(e) => {
+                (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=1920&q=90';
+              }}
+            />
           </div>
         </div>
       </section>

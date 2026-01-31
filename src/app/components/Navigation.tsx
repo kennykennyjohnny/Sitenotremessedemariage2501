@@ -9,8 +9,7 @@ interface NavigationProps {
 export default function Navigation({ variant = 'light' }: NavigationProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const location = useLocation();
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/NuptiaLogos/siteNotreMesseDeMariage/main';
-  const GITHUB_OLD = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
 
   const isActive = (path: string) => location.pathname === path;
@@ -35,7 +34,7 @@ export default function Navigation({ variant = 'light' }: NavigationProps) {
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="group">
             <img 
-              src={`${GITHUB_OLD}/images/logo_avectexte_horizontal.png`}
+              src={`${GITHUB_RAW}/images/logo_avectexte_horizontal.png`}
               alt="Notre Messe de Mariage" 
               className="h-10 w-auto transition-transform group-hover:scale-105"
               onError={(e) => {

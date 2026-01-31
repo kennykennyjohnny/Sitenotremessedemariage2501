@@ -4,8 +4,7 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function FuturesMaries() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/NuptiaLogos/siteNotreMesseDeMariage/main';
-  const GITHUB_OLD = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -80,16 +79,16 @@ export default function FuturesMaries() {
       <Navigation variant="dark" />
 
       {/* Hero Section avec dégradé */}
-      <section className="relative py-20 px-4 overflow-hidden pt-20">
+      <section className="relative py-20 px-4 overflow-hidden pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(101,45,144,0.05)] via-transparent to-[rgba(250,130,17,0.05)]"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
-            <div className="inline-flex w-16 h-16 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-2xl items-center justify-center mb-6 shadow-2xl">
+            <div className="inline-flex w-16 h-16 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-2xl items-center justify-center mb-8 shadow-2xl">
               <Heart className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#652D90] mb-6 uppercase" style={alfarnFont}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#652D90] mb-6 uppercase" style={alfarnFont}>
               Préparez votre<br />
-              <span className="text-[#FA8211] text-5xl md:text-6xl lg:text-7xl">Messe de Mariage</span>
+              <span className="text-[#FA8211] text-4xl md:text-5xl lg:text-6xl">Messe de Mariage</span>
             </h1>
             <p className="text-xl text-[#000000]/70 max-w-3xl mx-auto mb-8" style={avenirFont}>
               Une solution complète pour créer une célébration liturgique conforme, personnalisée et inoubliable
@@ -111,7 +110,7 @@ export default function FuturesMaries() {
           {/* Image principale avec dégradé */}
           <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-16 max-w-4xl mx-auto">
             <img 
-              src={`${GITHUB_RAW}/pexels-photography-maghradze-ph-1659410-31953135.jpg`}
+              src={`${GITHUB_RAW}/images/pexels-photography-maghradze-ph-1659410-31953135.jpg`}
               alt="Couple de mariés"
               className="w-full h-96 object-cover"
               onError={(e) => {
@@ -181,7 +180,7 @@ export default function FuturesMaries() {
         <div className="max-w-4xl mx-auto">
           <div className="relative rounded-3xl overflow-hidden shadow-2xl">
             <img 
-              src={`${GITHUB_RAW}/wedding-photography-RJDWzHyh6gE-unsplash.jpg`}
+              src={`${GITHUB_RAW}/images/wedding-photography-RJDWzHyh6gE-unsplash.jpg`}
               alt="Témoignage couple"
               className="w-full h-[500px] object-cover"
               onError={(e) => {

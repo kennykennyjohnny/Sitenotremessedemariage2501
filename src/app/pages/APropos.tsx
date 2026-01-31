@@ -3,28 +3,28 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function APropos() {
-  const GITHUB_OLD = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
   const team = [
     {
-      name: 'Paul-Henri Andrieu',
+      name: 'Pierre-Roger TUFFÉRY',
       role: 'Co-fondateur',
-      icon: Code,
-      description: 'IT & Développement de la plateforme'
+      photo: `${GITHUB_RAW}/images/team/pierre-roger-tuffery.jpg`,
+      description: 'Juriste en droit des affaires de formation et conducteur de louange, il accompagne depuis plusieurs années des soirées de louanges, messes et cérémonies de mariage. Au contact des paroisses et des couples, il identifie les besoins concrets du terrain et conçoit la structure fonctionnelle de l\'application.'
     },
     {
-      name: 'Pierre-Roger Tuffery',
+      name: 'Paul-Henri ANDRIEU',
       role: 'Co-fondateur',
-      icon: Award,
-      description: 'Juridique, Légal & Liturgie'
+      photo: `${GITHUB_RAW}/images/team/paul-henri-andrieu.jpg`,
+      description: 'Étudiant centralien et développeur passionné, il transforme la vision du projet en une plateforme technique fiable, sécurisée, intuitive et évolutive. Son expertise permet de créer une solution robuste répondant aux attentes des utilisateurs.'
     },
     {
-      name: 'Raphaël Isambert',
+      name: 'Raphaël ISAMBERT',
       role: 'Co-fondateur',
-      icon: Target,
-      description: 'Finance & Marketing'
+      photo: `${GITHUB_RAW}/images/team/raphael-isambert.jpg`,
+      description: 'Contrôleur financier, Raphaël est guitariste et a accompagné pendant près de 10ans messes et soirées de louange diverses. Doté de compétences en audiovisuel, il met ses compétences, au-delà de son expertise financière et son expertise musicale au service du projet.'
     }
   ];
 
@@ -33,16 +33,16 @@ export default function APropos() {
       <Navigation variant="dark" />
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden pt-20">
+      <section className="relative py-20 px-4 overflow-hidden pt-32">
         <div className="absolute inset-0 bg-gradient-to-br from-[rgba(101,45,144,0.05)] via-transparent to-[rgba(250,130,17,0.05)]"></div>
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-flex w-16 h-16 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-2xl items-center justify-center mb-6 shadow-2xl">
+            <div className="inline-flex w-16 h-16 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-2xl items-center justify-center mb-8 shadow-2xl">
               <Users className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#652D90] mb-6 uppercase" style={alfarnFont}>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[#652D90] mb-6 uppercase" style={alfarnFont}>
               À propos de<br />
-              <span className="text-[#FA8211] text-5xl md:text-6xl lg:text-7xl">NuptiaLogos</span>
+              <span className="text-[#FA8211] text-4xl md:text-5xl lg:text-6xl">NuptiaLogos</span>
             </h1>
             <p className="text-xl text-[#000000]/70 max-w-3xl mx-auto" style={avenirFont}>
               L'équipe passionnée derrière Notre Messe de Mariage
@@ -53,18 +53,102 @@ export default function APropos() {
 
       {/* Notre Mission */}
       <section className="py-16 px-4 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-[#652D90] mb-8 uppercase" style={alfarnFont}>
-            Notre Mission
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#652D90] mb-8 text-center uppercase" style={alfarnFont}>
+            Notre Messe de Mariage
           </h2>
           <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-[#FA8211]/20">
-            <Heart className="w-12 h-12 text-[#FA8211] mx-auto mb-4" />
             <p className="text-lg text-[#000000]/80 leading-relaxed mb-4" style={avenirFont}>
-              Chez <strong className="text-[#652D90]">NuptiaLogos</strong>, nous croyons que chaque mariage religieux mérite une célébration liturgique <strong className="text-[#FA8211]">conforme, personnalisée et mémorable</strong>.
+              <strong className="text-[#FA8211]">Notre Messe de Mariage</strong> est une <strong className="text-[#652D90]">plateforme collaborative dédiée à l'organisation des cérémonies de mariage catholiques</strong>, qu'il s'agisse d'une messe ou d'une célébration. Elle centralise toutes les informations nécessaires, facilite la préparation des déroulés et améliore la coordination entre mariés, paroisses et musiciens.
             </p>
             <p className="text-lg text-[#000000]/80 leading-relaxed" style={avenirFont}>
-              Notre plateforme connecte couples, paroisses et musiciens pour créer ensemble des célébrations qui honorent la tradition tout en reflétant l'unicité de chaque union.
+              <strong className="text-[#652D90]">Notre ambition</strong> : offrir une <strong className="text-[#FA8211]">expérience simple, moderne et harmonieuse dans la préparation de la célébration entre tous les acteurs</strong>.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Constat Pastoral */}
+      <section className="py-16 px-4 bg-gradient-to-br from-[#652D90]/10 to-[#FA8211]/10">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#652D90] mb-8 text-center uppercase" style={alfarnFont}>
+            Constat Pastoral
+          </h2>
+          
+          <div className="bg-white/95 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-2xl">
+            <p className="text-base text-[#000000]/80 leading-relaxed mb-6" style={avenirFont}>
+              La préparation au sacrement de mariage constitue un temps fondamental de la vie de l'Église. Elle engage les prêtres et les équipes pastorales (couples CPM notamment) dans un accompagnement spirituel des couples, visant à les aider à comprendre et à vivre pleinement le sens du sacrement qu'ils s'apprêtent à recevoir, bien au-delà de la simple organisation de la cérémonie.
+            </p>
+            
+            <p className="text-base text-[#000000]/80 leading-relaxed mb-6" style={avenirFont}>
+              Dans ce cadre, la préparation de la messe ou de la célébration de mariage s'inscrit comme une étape importante de ce cheminement. Elle implique de nombreux échanges et la transmission progressive d'informations (choix des textes et des chants, droulé liturgique, intervenants, contraintes propres à chaque paroisse, etc.). Ces éléments sont souvent partagés par des canaux multiples et hétérogènes, ce qui peut rendre le suivi plus complexe pour les équipes paroissiales.
+            </p>
+
+            <p className="text-base text-[#000000]/80 leading-relaxed mb-6" style={avenirFont}>
+              Cette réalité s'inscrit dans un <strong className="text-[#FA8211]">contexte pastoral en profonde évolution</strong>. Sur le temps long, le nombre de prêtres en France a fortement diminué : on en comptait environ 42 000 en 1960, 24 000 en 2000 et environ 12 000 en 2025, dont près de 6 700 exercent encore un ministère actif. Cette baisse structurelle, largement connue, conduit les prêtres à assumer un nombre croissant de missions, souvent sur des territoires étendus.
+            </p>
+
+            <p className="text-base text-[#000000]/80 leading-relaxed mb-6" style={avenirFont}>
+              Dans ce contexte, <strong className="text-[#652D90]">le temps pastoral devient une ressource particulièrement précieuse</strong>. Les tâches de coordination liées à la préparation des célébrations, bien que nécessaires, peuvent réduire le temps disponible pour l'essentiel : l'écoute, le discernement et l'accompagnement spirituel des couples dans leur chemin vers le sacrement de mariage.
+            </p>
+
+            <p className="text-base text-[#000000]/80 leading-relaxed" style={avenirFont}>
+              C'est à partir de ce constat que s'inscrit la démarche de <strong className="text-[#FA8211]">Notre Messe de Mariage</strong> : proposer un cadre structurant et partagé permettant de simplifier l'organisation de la préparation liturgique, de rendre les informations lisibles et accessibles à l'ensemble des acteurs, et ainsi de redonner du temps aux prêtres et aux équipes pastorales pour l'accompagnement au sacrement, cœur de leur mission.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Un projet au service du temps pastoral */}
+      <section className="py-16 px-4">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-[#652D90] mb-4 text-center uppercase" style={alfarnFont}>
+            Un projet au service<br />du temps pastoral
+          </h2>
+          <p className="text-center text-lg text-[#000000]/70 mb-12 max-w-3xl mx-auto" style={avenirFont}>
+            Notre Messe de Mariage vise à réduire le temps consacré à la coordination et à la gestion des préparations, 
+            afin de <strong className="text-[#FA8211]">recentrer l'accompagnement pastoral sur l'essentiel : la préparation au sacrement</strong>.
+          </p>
+
+          <div className="grid md:grid-cols-2 gap-6">
+            {[
+              {
+                title: 'Une préparation centralisée sur un seul outil',
+                desc: 'Toutes les informations, documents et échanges des mariages célébrés regroupés au même endroit.'
+              },
+              {
+                title: 'Des échanges ciblés, au bon endroit',
+                desc: 'Les questions et remarques portant directement sur les textes, chants ou rites concernés.'
+              },
+              {
+                title: 'Un suivi clair de l\'avancement des couples',
+                desc: 'Les équipes visualisent immédiatement ce qui est complété, en cours ou à relire.'
+              },
+              {
+                title: 'Un cadre explicite de relecture et de validation',
+                desc: 'Les prêtres et équipes valident les éléments dans le respect du cadre liturgique, sans ressaisie.'
+              },
+              {
+                title: 'Un déroulé liturgique structuré dès le départ',
+                desc: 'Les choix sont organisés selon les étapes de la célébration, sans reconstitution manuelle et en fonction du type de la cérémonie.'
+              },
+              {
+                title: 'Des documents finalisés prêts pour le jour J',
+                desc: 'Livret et livret sont générés à partir des éléments validés, sans retraitement.'
+              }
+            ].map((benefit, i) => (
+              <div 
+                key={i} 
+                className="bg-gradient-to-br from-[#FA8211] to-[#ff9f3a] rounded-2xl p-6 text-white shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+              >
+                <h3 className="text-xl font-bold mb-3 uppercase" style={alfarnFont}>
+                  {benefit.title}
+                </h3>
+                <p className="text-white/90 text-sm leading-relaxed" style={avenirFont}>
+                  {benefit.desc}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -79,8 +163,19 @@ export default function APropos() {
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#FA8211]/30 text-center">
-                <div className="w-20 h-20 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-full flex items-center justify-center mb-6 mx-auto">
-                  <member.icon className="w-10 h-10 text-white" />
+                {/* Photo circulaire avec bordure dégradée */}
+                <div className="relative w-32 h-32 mx-auto mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-full p-1">
+                    <img 
+                      src={member.photo}
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover bg-white"
+                      onError={(e) => {
+                        // Fallback vers une image placeholder
+                        (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&size=200&background=652D90&color=fff&bold=true`;
+                      }}
+                    />
+                  </div>
                 </div>
                 <h3 className="text-2xl font-bold text-[#652D90] mb-2" style={alfarnFont}>
                   {member.name}
@@ -88,7 +183,7 @@ export default function APropos() {
                 <div className="text-sm text-[#FA8211] font-bold mb-4 uppercase" style={alfarnFont}>
                   {member.role}
                 </div>
-                <p className="text-[#000000]/70" style={avenirFont}>
+                <p className="text-[#000000]/70 text-sm leading-relaxed" style={avenirFont}>
                   {member.description}
                 </p>
               </div>
