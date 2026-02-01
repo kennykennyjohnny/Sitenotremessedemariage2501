@@ -1,10 +1,11 @@
 import { Church, Check, ArrowRight, Users, Calendar, FileCheck, Shield } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function Paroisses() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Sitenotremessedemariage2501/main';
+  const navigate = useNavigate();
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/PHOTOSNMDM/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -131,14 +132,14 @@ export default function Paroisses() {
             </div>
 
             {/* Image principale */}
-            <div className="relative">
+            <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#98A882]/20 to-[#652D90]/20 rounded-3xl blur-2xl"></div>
               <img 
                 src={`${GITHUB_RAW}/PAROISSEPAGE1.jpg`}
                 alt="Église paroisse"
                 className="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1464047736614-af63643285bf?w=1200&q=90';
+                  (e.currentTarget as HTMLImageElement).src = `${GITHUB_RAW}/DSC05017.jpg`;
                 }}
               />
             </div>

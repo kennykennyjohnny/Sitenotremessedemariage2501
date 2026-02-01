@@ -61,9 +61,10 @@ export default function Navigation({ variant = 'light' }: NavigationProps) {
             
             <div className="flex items-center gap-2">
               <button 
+                onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}
                 className={`${textClass}/90 ${textHoverClass} px-3 py-1.5 text-sm font-medium transition`}
                 style={alfarnFont}>
-                Connexion
+                Se connecter
               </button>
               <button 
                 onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}

@@ -3,11 +3,11 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function APropos() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Sitenotremessedemariage2501/main';
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/PHOTOSNMDM/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
-  const team = [
+  const founders = [
     {
       name: 'Pierre-Roger TUFFÉRY',
       role: 'Co-fondateur',
@@ -161,7 +161,7 @@ export default function APropos() {
           </h2>
           
           <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, i) => (
+            {founders.map((member, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#FA8211]/30 text-center">
                 {/* Photo circulaire avec bordure dégradée - RECADRÉE ET CENTRÉE */}
                 <div className="relative w-48 h-48 mx-auto mb-6">
@@ -172,7 +172,7 @@ export default function APropos() {
                         alt={member.name}
                         className="w-full h-full object-cover scale-125"
                         style={{ 
-                          objectPosition: i === 0 ? 'center 35%' : i === 1 ? 'center 30%' : 'center 25%'
+                          objectPosition: i === 0 ? 'center 25%' : i === 1 ? 'center 30%' : 'center 25%'
                         }}
                         onError={(e) => {
                           // Fallback vers une image placeholder

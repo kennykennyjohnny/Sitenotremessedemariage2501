@@ -1,10 +1,11 @@
 import { Music2, Check, ArrowRight, Users, FileText, DollarSign, Calendar, Sparkles } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function Musiciens() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Sitenotremessedemariage2501/main';
+  const navigate = useNavigate();
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/PHOTOSNMDM/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -86,7 +87,7 @@ export default function Musiciens() {
                 </div>
                 
                 <button 
-                  onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}
+                  onClick={() => navigate('/inscription')}
                   className="group bg-gradient-to-r from-[#FA8211] to-[#ff9f3a] text-white px-8 py-4 rounded-xl font-bold shadow-xl hover:shadow-2xl transition-all hover:scale-105 inline-flex items-center gap-2"
                   style={alfarnFont}>
                   Créer mon profil
@@ -111,14 +112,14 @@ export default function Musiciens() {
             </div>
 
             {/* Image principale */}
-            <div className="relative">
+            <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#652D90]/20 to-[#B56576]/20 rounded-3xl blur-2xl"></div>
               <img 
                 src={`${GITHUB_RAW}/MUSICIENPAGE.jpeg`}
                 alt="Musicien liturgique"
                 className="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=1200&q=90';
+                  (e.currentTarget as HTMLImageElement).src = `${GITHUB_RAW}/DSC05017.jpg`;
                 }}
               />
             </div>
@@ -189,7 +190,7 @@ export default function Musiciens() {
               </ul>
               
               <button 
-                onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}
+                onClick={() => navigate('/inscription')}
                 className="w-full bg-gradient-to-r from-[#652D90] to-[#8B4F9D] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 style={alfarnFont}>
                 Commencer gratuitement
@@ -221,7 +222,7 @@ export default function Musiciens() {
               </ul>
               
               <button 
-                onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}
+                onClick={() => navigate('/inscription')}
                 className="w-full bg-gradient-to-r from-[#FA8211] to-[#ff9f3a] text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:shadow-xl transition-all hover:scale-105"
                 style={alfarnFont}>
                 Essayer Premium gratuit
@@ -283,7 +284,7 @@ export default function Musiciens() {
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <button 
-              onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}
+              onClick={() => navigate('/inscription')}
               className="group bg-gradient-to-r from-[#FA8211] to-[#ff9f3a] text-white px-12 py-6 rounded-full text-xl font-bold shadow-2xl hover:shadow-[#FA8211]/50 transition-all hover:scale-105 inline-flex items-center gap-3"
               style={alfarnFont}>
               Créer mon profil gratuitement

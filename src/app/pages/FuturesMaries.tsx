@@ -1,10 +1,11 @@
 import { Heart, Check, ArrowRight, Sparkles, FileText, Users, Download } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function FuturesMaries() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Sitenotremessedemariage2501/main';
+  const navigate = useNavigate();
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/PHOTOSNMDM/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -113,14 +114,14 @@ export default function FuturesMaries() {
             </div>
 
             {/* Image principale */}
-            <div className="relative">
+            <div className="relative group">
               <div className="absolute -inset-4 bg-gradient-to-br from-[#FA8211]/20 to-[#652D90]/20 rounded-3xl blur-2xl"></div>
               <img 
                 src={`${GITHUB_RAW}/PAGEMARIE11.jpg`}
                 alt="Couple de mariés"
                 className="relative w-full h-[500px] object-cover rounded-3xl shadow-2xl"
                 onError={(e) => {
-                  (e.currentTarget as HTMLImageElement).src = 'https://images.unsplash.com/photo-1606800052052-a08af7148866?w=1200&q=90';
+                  (e.currentTarget as HTMLImageElement).src = `${GITHUB_RAW}/DSC05017.jpg`;
                 }}
               />
             </div>

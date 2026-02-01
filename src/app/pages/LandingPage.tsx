@@ -1,10 +1,11 @@
 import { Heart, Church, Music2, Check, Sparkles, ArrowRight, HelpCircle } from 'lucide-react';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function LandingPage() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Sitenotremessedemariage2501/main';
+  const navigate = useNavigate();
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/PHOTOSNMDM/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -12,8 +13,8 @@ export default function LandingPage() {
     <div className="min-h-screen bg-gradient-to-br from-[#652D90] via-[#8B4F9D] to-[#FA8211]">
       <Navigation variant="dark" />
       
-      {/* Hero Section avec photo floutée et dézoomée */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-16">
+      {/* Hero avec overlay */}
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-[#652D90] via-[#8B4F9D] to-[#FA8211]">
         <div className="absolute inset-0">
           <img 
             src={`${GITHUB_RAW}/Accueil.jpg`}
@@ -62,8 +63,7 @@ export default function LandingPage() {
                 onClick={() => window.location.href = 'https://app.notremessedemariage.fr'}
                 className="bg-white/10 backdrop-blur-md hover:bg-white/20 text-white px-10 py-5 rounded-full text-xl font-bold border-2 border-white/30 transition-all hover:scale-105 inline-flex items-center gap-3"
                 style={alfarnFont}>
-                <HelpCircle className="w-6 h-6" />
-                Aide
+                Se connecter
               </button>
             </div>
           </div>
