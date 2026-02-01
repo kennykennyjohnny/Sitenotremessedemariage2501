@@ -3,7 +3,7 @@ import Navigation from '@/app/components/Navigation';
 import Footer from '@/app/components/Footer';
 
 export default function APropos() {
-  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Nmdm-Vraph/main';
+  const GITHUB_RAW = 'https://raw.githubusercontent.com/kennykennyjohnny/Sitenotremessedemariage2501/main';
   const alfarnFont = { fontFamily: "'Alfarn', sans-serif" };
   const avenirFont = { fontFamily: "'Avenir LT Pro', sans-serif" };
 
@@ -11,19 +11,19 @@ export default function APropos() {
     {
       name: 'Pierre-Roger TUFFÉRY',
       role: 'Co-fondateur',
-      photo: `${GITHUB_RAW}/images/team/pierre-roger-tuffery.jpg`,
+      photo: `${GITHUB_RAW}/PIERREROGER.png`,
       description: 'Juriste en droit des affaires de formation et conducteur de louange, il accompagne depuis plusieurs années des soirées de louanges, messes et cérémonies de mariage. Au contact des paroisses et des couples, il identifie les besoins concrets du terrain et conçoit la structure fonctionnelle de l\'application.'
     },
     {
       name: 'Paul-Henri ANDRIEU',
       role: 'Co-fondateur',
-      photo: `${GITHUB_RAW}/images/team/paul-henri-andrieu.jpg`,
+      photo: `${GITHUB_RAW}/PAULHENRI.png`,
       description: 'Étudiant centralien et développeur passionné, il transforme la vision du projet en une plateforme technique fiable, sécurisée, intuitive et évolutive. Son expertise permet de créer une solution robuste répondant aux attentes des utilisateurs.'
     },
     {
       name: 'Raphaël ISAMBERT',
       role: 'Co-fondateur',
-      photo: `${GITHUB_RAW}/images/team/raphael-isambert.jpg`,
+      photo: `${GITHUB_RAW}/RAPHAEL.png`,
       description: 'Contrôleur financier, Raphaël est guitariste et a accompagné pendant près de 10ans messes et soirées de louange diverses. Doté de compétences en audiovisuel, il met ses compétences, au-delà de son expertise financière et son expertise musicale au service du projet.'
     }
   ];
@@ -163,18 +163,23 @@ export default function APropos() {
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, i) => (
               <div key={i} className="bg-white rounded-2xl p-8 shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 border-2 border-transparent hover:border-[#FA8211]/30 text-center">
-                {/* Photo circulaire avec bordure dégradée */}
-                <div className="relative w-32 h-32 mx-auto mb-6">
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-full p-1">
-                    <img 
-                      src={member.photo}
-                      alt={member.name}
-                      className="w-full h-full rounded-full object-cover bg-white"
-                      onError={(e) => {
-                        // Fallback vers une image placeholder
-                        (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&size=200&background=652D90&color=fff&bold=true`;
-                      }}
-                    />
+                {/* Photo circulaire avec bordure dégradée - RECADRÉE ET CENTRÉE */}
+                <div className="relative w-48 h-48 mx-auto mb-6">
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#FA8211] to-[#652D90] rounded-full p-1.5">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-white">
+                      <img 
+                        src={member.photo}
+                        alt={member.name}
+                        className="w-full h-full object-cover scale-125"
+                        style={{ 
+                          objectPosition: i === 0 ? 'center 35%' : i === 1 ? 'center 30%' : 'center 25%'
+                        }}
+                        onError={(e) => {
+                          // Fallback vers une image placeholder
+                          (e.currentTarget as HTMLImageElement).src = `https://ui-avatars.com/api/?name=${encodeURIComponent(member.name)}&size=300&background=652D90&color=fff&bold=true`;
+                        }}
+                      />
+                    </div>
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-[#652D90] mb-2" style={alfarnFont}>

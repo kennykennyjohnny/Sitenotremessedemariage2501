@@ -4,6 +4,8 @@ import FuturesMaries from "./pages/FuturesMaries";
 import Paroisses from "./pages/Paroisses";
 import Musiciens from "./pages/Musiciens";
 import APropos from "./pages/APropos";
+import FAQ from "./pages/FAQ";
+import MentionsLegales from "./pages/MentionsLegales";
 import RootLayout from "./components/RootLayout";
 
 export const router = createBrowserRouter([
@@ -30,6 +32,14 @@ export const router = createBrowserRouter([
       {
         path: "a-propos",
         Component: APropos,
+      },
+      {
+        path: "faq",
+        Component: FAQ,
+      },
+      {
+        path: "mentions-legales",
+        Component: MentionsLegales,
       },
     ],
   },

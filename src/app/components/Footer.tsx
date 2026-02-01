@@ -57,10 +57,13 @@ export default function Footer() {
               <a href="https://app.notremessedemariage.fr" className="block text-white/80 hover:text-white transition">
                 Créer un compte
               </a>
-              <a href="#" className="block text-white/80 hover:text-white transition">
+              <Link to="/faq" className="block text-white/80 hover:text-white transition">
                 FAQ
-              </a>
-              <a href="#" className="block text-white/80 hover:text-white transition">
+              </Link>
+              <Link to="/mentions-legales" className="block text-white/80 hover:text-white transition">
+                Mentions légales
+              </Link>
+              <a href="mailto:contact@notremessedemariage.fr" className="block text-white/80 hover:text-white transition">
                 Contact
               </a>
             </div>
